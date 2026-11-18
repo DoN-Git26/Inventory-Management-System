@@ -32,10 +32,10 @@ def prompt_number(label, cast, optional=False):
         try:
             value = cast(raw)
         except ValueError:
-            print("Invalid number, please try again.")
+            print("Invalid number,  try again.")
             continue
         if value < 0:
-            print("Value must not be negative.")
+            print("Value  cannot be negative.")
             continue
         return value
 
@@ -53,7 +53,7 @@ def view_inventory():
     if items is None:
         return
     if not items:
-        print("Inventory is empty.")
+        print("Inventory is blank.")
     for item in items:
         print(format_item(item))
 
